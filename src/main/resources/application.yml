@@ -1,0 +1,32 @@
+##################### DATABASE PROPERTIES ####################
+spring:
+  datasource:
+    initialize: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-reddit-clone
+    username: tama
+    password: mysql
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+#  ##################### EMAIL PROPERTIES ####################
+#  mail:
+#    host: smtp.mailtrap.io
+#    port: 2525
+#    username: efb6bd88356eb9
+#    password: 13dc0ee0498c82
+#    protocol: smtp
+#
+###################### Jwt Porperties ######################
+#jwt:
+#  expiration:
+#    time: 900000
+application:
+  jwt:
+    secretKey: securekeysecurekeysecurekeysecurekeysecurekeysecurekeysecurekeysecurekey
+    tokenPrefix: Bearer
+    tokenExpirationAfterDays: 14
